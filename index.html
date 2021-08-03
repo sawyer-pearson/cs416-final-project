@@ -42,7 +42,7 @@
             `translate(${margin.left},${margin.top})`);
 
     // get the data
-    d3.csv("./cs416dataFiltered.csv").then( function(data) {
+    d3.csv("./cs416dataFiltered.csv", function(data) {
         for (var i = 0; i < data.length; i++) {
         console.log(data[i].Gender);
         console.log(data[i].Perc);
