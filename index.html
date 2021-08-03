@@ -43,6 +43,11 @@
 
     // get the data
     d3.csv("./cs416dataFiltered.csv").then( function(data) {
+        for (var i = 0; i < data.length; i++) {
+        console.log(data[i].type);
+        console.log(data[i].value);
+    }
+
 
     // X axis: scale and draw:
     const x = d3.scaleLinear()
