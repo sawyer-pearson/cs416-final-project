@@ -20,7 +20,7 @@
  <p>This is another paragraph.</p>
 </div>
 
-<svg width=150 height=300></svg>
+<p> <svg width=150 height=300></svg> </p>
 <script>
     var width = 450
     height = 450
@@ -38,7 +38,7 @@
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     // Create dummy data
-    var data = {Male: 140, Female: 75}
+    var data = {M: 140, F: 75}
 
     // set the color scale
     var color = d3.scaleOrdinal()
