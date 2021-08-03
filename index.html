@@ -22,7 +22,7 @@
 
     <div class="">
         <h1>Heading for Landing Page</h1>
-        <p>This is a paragraph.</p>
+        <p>Changed.</p>
         <p>This is another paragraph.</p>
     </div>
 
@@ -59,8 +59,8 @@
         .thresholds(x.ticks(40)); // then the numbers of bins
 
     // And apply twice this function to data to get the bins.
-    const bins1 = histogram(data.filter( function(d){return d.type === "Male"} ));
-    const bins2 = histogram(data.filter( function(d){return d.type === "Female"} ));
+    const bins1 = histogram(data.filter( function(d){return d.type === "M"} ));
+    const bins2 = histogram(data.filter( function(d){return d.type === "F"} ));
 
     // Y axis: scale and draw:
     const y = d3.scaleLinear()
