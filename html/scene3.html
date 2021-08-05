@@ -3,7 +3,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
-<script src='https://d3js.org/d3.v5.min.js'></script>
 
 <head>
     <title>Scene 3</title>
@@ -20,27 +19,21 @@
  <p>This is another paragraph.</p>
 </div>
 
-<svg width=150 height=300></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+  <svg viewBox="0 0 400 500">
+</svg>
+  
+  </body>
+</html>
+
 <script>
-    xdomain=[0,42];
-    xrange=[0,100];
-    ydomain=[0,5];
-    yrange=[100,250];
-    cdomain = [0,42];
-    crange = ["blue","orange"];
-    xs = d3.scaleLinear().domain(xdomain).range(xrange);
-    ys = d3.scaleLinear().domain(ydomain).range(yrange);
-    cs = d3.scaleLinear().domain(cdomain).range(crange);
-    d3.select('svg')
-        .selectAll('rect')
-        .data([4,8,15,16,23,42])
-        .enter()
-        .append('rect')
-            .attr('x',20)
-            .attr('y',function(d,i) {return ys(i);})
-            .attr('width',function(d,i) {return xs(d);})
-            .attr('height',10)
-            .style('fill',function(d,i) {return cs(d);})
+ var svg = d3.select('svg')
+
+var myimage = svg.append('image')
+    .attr('xlink:href', 'https://www.wfmt.com/wp-content/uploads/2018/01/grammy_award_lg-e1517158076197.jpg')
+    .attr('width', 200)
+    .attr('height', 200)
+   myimage.attr('x', 50);
 </script>
 
 <a href="../index.html"><button>Go back to start!</button></a>
